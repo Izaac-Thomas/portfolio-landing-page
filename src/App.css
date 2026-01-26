@@ -1,8 +1,26 @@
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #111827;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -25,6 +43,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '_';
+  color: #eab308;
+  animation: blink 1.2s step-end infinite;
 }
 
 @media (prefers-reduced-motion: no-preference) {

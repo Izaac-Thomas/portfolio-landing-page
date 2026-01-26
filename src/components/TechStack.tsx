@@ -24,16 +24,16 @@ const stack = [
         title: 'Interface',
         icon: IconAppWindow,
         description: 'Modern, type-safe frontends',
-        skills: ['TypeScript', 'React', 'Mantine UI', 'VixX', 'Vite']
+        skills: ['TypeScript', 'React', 'Mantine UI', 'VisX', 'Vite']
     }
 ];
 
 export function TechStack() {
     return (
-        <Container id="stack" size="md" py="xl" mb={100} h="100vh" style={{ scrollMarginTop: '100px' }}>
+        <Container id="stack" size="lg" py="xl" mb={100} style={{ scrollMarginTop: '80px' }}>
             <Title
                 order={2}
-                mb="lg"
+                mb="xl"
                 c="dimmed"
                 style={{
                     fontFamily: 'JetBrains Mono, monospace',
@@ -42,15 +42,32 @@ export function TechStack() {
                     letterSpacing: 2
                 }}
             >
-                // Technical_Specification
+                // Technical_Stack
             </Title>
 
-            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="xl">
                 {stack.map((category) => (
-                    <Card key={category.title} padding="lg" radius="md" withBorder bg="rgba(0,0,0,0.3)">
+                    <Card 
+                        key={category.title} 
+                        padding="lg" 
+                        radius="md" 
+                        style={{ 
+                            backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                            border: '1px solid rgba(255, 255, 255, 0.05)',
+                            transition: 'border-color 0.2s',
+                        }}
+                    >
                         <Group align="flex-start" mb="md">
-                            <ThemeIcon size="lg" radius="md" variant="light" color="yellow">
-                                <category.icon size={20} />
+                            <ThemeIcon 
+                                size="xl" 
+                                radius="md" 
+                                variant="light" 
+                                color="yellow.5"
+                                style={{
+                                    backgroundColor: 'rgba(234, 179, 8, 0.1)'
+                                }}
+                            >
+                                <category.icon size={22} />
                             </ThemeIcon>
                             <div>
                                 <Text fw={700} size="lg" c="white" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -69,11 +86,12 @@ export function TechStack() {
                                     variant="outline"
                                     color="grey"
                                     radius="sm"
-                                    size="lg"
+                                    size="md"
                                     style={{ 
                                         textTransform: 'none', 
                                         fontWeight: 500,
-                                        color: '#d1d5db'
+                                        color: '#9ca3af',
+                                        borderColor: 'rgba(255, 255, 255, 0.1)'
                                     }}
                                 >
                                     {skill}

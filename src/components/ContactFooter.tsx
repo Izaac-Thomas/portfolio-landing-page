@@ -3,8 +3,33 @@ import { IconMail, IconBrandGithub, IconBrandLinkedin, IconTerminal2 } from '@ta
 
 export function ContactFooter() {
     return (
-        <Box id="contact" bg="rgba(0,0,0,0.2)" style={{ borderTop: '1px solid #374151' }}>
-            <Container size="md" py={80}>
+        <Box 
+            component="footer"
+            id="contact" 
+            bg="rgba(0,0,0,0.2)" 
+            style={{ 
+                borderTop: '1px solid #374151' ,
+                position: 'relative',
+                zIndex: 10,
+                backgroundColor: '#111827',
+                overflow: 'hidden',
+            }}
+        >
+            <Box 
+                style={{
+                    position: 'absolute',
+                    top: '5%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '600px',
+                    height: '400px',
+                    background: 'radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, transparent 70%)',
+                    filter: 'blur(80px)',
+                    pointerEvents: 'none',
+                    zIndex: 0
+                }}
+            />
+            <Container size="md" py={80} style={{ position: 'relative', zIndex: 1 }}>
                 <Stack gap="xl" align="center">
                     <Stack gap={0} align="center">
                         <Group gap="xs" mb="sm">
@@ -46,7 +71,7 @@ export function ContactFooter() {
                         contact@izaacthomas.com
                     </Button>
 
-                    <Divider w="100%" color="dark.6" my="xl" />
+                    <Divider w="100%" color="dark.5" my="xl" style={{ opacity: 0.5 }}/>
 
                     <Group justify="space-between" w="100%">
                         <Text size="sm" c="dimmed" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
