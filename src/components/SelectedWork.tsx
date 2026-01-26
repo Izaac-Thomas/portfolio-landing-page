@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Container, Title, Card, Image, Text, Group, Badge, Button, Stack, SimpleGrid, Box, Code, Modal } from '@mantine/core';
-import { IconArrowRight, IconLock, IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
+import { IconArrowRight, IconLock, IconBrandGithub } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 
-const CodeVisual = ({ tech, title }: { tech: string[], title: string }) => (
+const CodeVisual = ({ title }: { tech: string[], title: string }) => (
     <Box
         h="100%"
         mih={250}
@@ -153,7 +153,7 @@ const WindowVisual = ({ images, windowTitle = 'localhost:5173' }: { images: stri
 
             {images.length > 1 && (
                 <Group gap="xs" p="xs" bg="#25262b" justify="center">
-                    {images.map((img, index) => (
+                    {images.map((_, index) => (
                         <Box
                             key={index}
                             onClick={() => setActiveImage(index)}
