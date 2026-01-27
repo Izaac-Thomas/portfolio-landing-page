@@ -15,6 +15,8 @@ const CodeVisual = ({ title }: { tech: string[], title: string }) => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
+            overflow: 'hidden',
+            maxWidth: '100%'
         }}
     >
         <Group gap={6} mb="md">
@@ -25,7 +27,7 @@ const CodeVisual = ({ title }: { tech: string[], title: string }) => (
                 {title.includes('Portfolio') ? 'tsx' : 'bash'}
             </Text>
         </Group>
-
+        <Box style={{ overflowX: 'auto', maxWidth: '100%' }}>
         <Code block color="dark" style={{ fontSize: '0.7rem', lineHeight: 1.6, background: 'transparent' }}>
             {
                 title.includes('RAG') ? (
@@ -76,6 +78,7 @@ const CodeVisual = ({ title }: { tech: string[], title: string }) => (
                 )
             }
         </Code>
+        </Box>
     </Box>
 );
 
