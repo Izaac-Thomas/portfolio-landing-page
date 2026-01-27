@@ -100,7 +100,7 @@ const WindowVisual = ({ images, windowTitle = 'localhost:5173' }: { images: stri
             <Image
                 src={images[activeImage]}
                 radius="md"
-                style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }}
+                style={{ maxHeight: '85vh', maxWidth: '95%', width: 'auto', objectFit: 'contain' }}
             />
         </Modal>
 

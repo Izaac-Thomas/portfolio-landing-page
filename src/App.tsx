@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './App.css'
 import { 
   Container,
@@ -22,8 +24,6 @@ function App() {
       style={{
         minHeight: '100vh',
         backgroundColor: '#111827',
-        // backgroundImage: 'radial-gradient(#374151 1px, transparent 1px)',
-        // backgroundSize: '40px 40px',
         position: 'relative',
         color: 'white',
         overflow: 'hidden'
@@ -131,17 +131,6 @@ function App() {
             >
               See My Work
             </Button>
-            {/* <Button 
-              variant="outline"
-              color="grey"
-              size="lg"
-              component="a"
-              href="/resume.pdf"
-              target="_blank"
-              leftSection={<IconDownload size={18} />}
-            >
-              Resume
-            </Button> */}
             <Button
               variant="default"
               size="lg"
@@ -168,6 +157,8 @@ function App() {
       <SelectedWork />
     </Box>
     <ContactFooter />
+    <Analytics />
+    <SpeedInsights />
     </Box>
   );
 }

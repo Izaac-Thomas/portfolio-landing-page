@@ -1,9 +1,10 @@
 import { Group, Text, Button, Box, Burger, Drawer, Stack, Container } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { IconTerminal2 } from '@tabler/icons-react';
 
 export function Header() {
     const [opened, { toggle, close }] = useDisclosure(false);
+    const isMobile = useMediaQuery('(max-width: 768px)');
 
     const scrollTo = (id: string) => {
         const element = document.getElementById(id);
@@ -53,11 +54,22 @@ export function Header() {
                     onClose={close} 
                     position="right" 
                     padding="xl" 
-                    size="md"
+                    size={isMobile ? '100%' : 'md'}
                     styles={{
-                        content: { backgroundColor: '#111827', borderLeft: '1px solid #374151' },
-                        header: { backgroundColor: '#111827' },
-                        close: {color: 'white'}
+                        content: { 
+                            backgroundColor: 'rgba(17, 24, 39, 0.85)', 
+                            backdropFilter: 'blur(12px)',
+                            borderLeft: '1px solid rgba(255, 255, 255, 0.05)' 
+                        },
+                        header: { 
+                            backgroundColor: 'transparent',
+                            color: 'white' 
+                        },
+                        close: {
+                            color: 'white',
+                            transition: 'background-color 0.2s',
+                            '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' }
+                        }
                     }}
                 >
                     <Stack gap="lg" mt="xl">
