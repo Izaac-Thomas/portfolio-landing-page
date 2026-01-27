@@ -59,7 +59,9 @@ export function Header() {
                         content: { 
                             backgroundColor: 'rgba(17, 24, 39, 0.85)', 
                             backdropFilter: 'blur(12px)',
-                            borderLeft: '1px solid rgba(255, 255, 255, 0.05)' 
+                            borderLeft: '1px solid rgba(255, 255, 255, 0.05)',
+                            maxWidth: '100%',
+                            width: '100%'
                         },
                         header: { 
                             backgroundColor: 'transparent',
@@ -69,6 +71,10 @@ export function Header() {
                             color: 'white',
                             transition: 'background-color 0.2s',
                             '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        inner: {
+                            width: '100%',
+                            overflowX: 'hidden'
                         }
                     }}
                 >
