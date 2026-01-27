@@ -49,7 +49,7 @@ function App() {
           top: '5%',
           left: '50%',
           transform: 'translateX(-50%)',
-          width: '70vh',
+          width: 'min(70vh, 100vw)',
           height: '50vh',
           backgroundColor: 'rgba(234, 179, 8, 0.25)',
           borderRadius: '100%',
