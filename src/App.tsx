@@ -87,7 +87,7 @@ function App() {
       <Header />
 
       <Container 
-        size="md" 
+        maw={'100%'}
         h="100vh" 
         style={{ 
           display: 'flex', 
