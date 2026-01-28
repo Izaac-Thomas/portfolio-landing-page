@@ -11,7 +11,7 @@ import {
   Badge,
   Box
  } from '@mantine/core';
- import { IconArrowRight, IconTerminal2 } from '@tabler/icons-react';
+ import { IconTerminal2, IconDownload } from '@tabler/icons-react';
  import { Header } from './components/Header';
  import { About } from './components/About';
  import { TechStack } from './components/TechStack';
@@ -49,7 +49,7 @@ function App() {
           top: '5%',
           left: '50%',
           transform: 'translateX(-50%)',
-          width: 'min(70vh, 100vw)',
+          width: 'min(70vh, 60vw)',
           height: '50vh',
           backgroundColor: 'rgba(234, 179, 8, 0.25)',
           borderRadius: '100%',
@@ -127,15 +127,17 @@ function App() {
               color="yellow"
               c="dark.9"
               onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-              rightSection={<IconArrowRight size={18} />}
             >
               See My Work
             </Button>
+
             <Button
               variant="default"
               size="lg"
               component='a'
-              href="mailto:contact@izaacthomas.com"
+              href="/resume.pdf"
+              download="Izaac_Thomas_Resume"
+              leftSection={<IconDownload size={18} />}
               styles={{
                 root: {
                   backgroundColor: 'rgba(255, 255, 255, 0.05)',
@@ -147,7 +149,7 @@ function App() {
                 }
               }}
             >
-              Contact Me
+              Resume
             </Button>
           </Group>
         </Stack>
