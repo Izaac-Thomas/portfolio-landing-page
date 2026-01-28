@@ -11,7 +11,7 @@ import {
   Badge,
   Box
  } from '@mantine/core';
- import { IconArrowDown, IconTerminal2, IconDownload } from '@tabler/icons-react';
+ import { IconTerminal2, IconDownload } from '@tabler/icons-react';
  import { Header } from './components/Header';
  import { About } from './components/About';
  import { TechStack } from './components/TechStack';
