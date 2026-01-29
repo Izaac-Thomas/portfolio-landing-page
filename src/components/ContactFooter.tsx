@@ -82,7 +82,7 @@ export function ContactFooter() {
                             <Anchor href="https://github.com/izaac-thomas" target="_blank" c="dimmed" lh={1}>
                                 <IconBrandGithub size={22} />
                             </Anchor>
-                            <Anchor href="https://linkedin.com/in/izaacthomas" target="_blank" c="dimmed" lh={1}>
+                            <Anchor href="https://linkedin.com/in/izaac-thomas" target="_blank" c="dimmed" lh={1}>
                                 <IconBrandLinkedin size={22} />
                             </Anchor>
                         </Group>
